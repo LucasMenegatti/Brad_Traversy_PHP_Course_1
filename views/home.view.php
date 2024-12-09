@@ -1,11 +1,7 @@
-<?php 
-
-loadPartial('head');
-loadPartial('navbar');
-loadPartial('showcase-search');
-loadPartial('top-banner');
-
-?>
+<?= loadPartial('head') ?>
+<?= loadPartial('navbar') ?>
+<?= loadPartial('showcase-search') ?>
+<?= loadPartial('top-banner') ?>
 
 <!-- Job Listings -->
 <section>
@@ -197,7 +193,5 @@ loadPartial('top-banner');
   </a>
 </section>
 
-<?php
-loadPartial('bottom-banner');
-loadPartial('footer'); 
-?>
+<?= loadPartial('bottom-banner') ?>
+<?= loadPartial('footer'); ?>
