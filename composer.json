@@ -1,0 +1,16 @@
+{
+    "name": "lucasmenegatti/workopia-php",
+    "description": "Job listing application",
+    "authors": [
+        {
+            "name": "Lucas Menegatti",
+            "email": "lucas@wgbtech.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}
