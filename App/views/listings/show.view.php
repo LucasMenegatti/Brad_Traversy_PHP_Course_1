@@ -13,6 +13,7 @@
         <a href="/edit" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded">Edit</a>
         <!-- Delete Form -->
         <form method="POST">
+          <input type="hidden" name="_method" value="DELETE">
           <button type="submit" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded">Delete</button>
         </form>
         <!-- End Delete Form -->
@@ -32,9 +33,11 @@
                 >Local</span
               > -->
             </li>
-            <li class="mb-2">
-              <strong>Tags:</strong> <span><?= $listing->tags ?></span>
-            </li>
+            <?php if(!empty($listing->tags)) : ?>
+              <li class="mb-2">
+                <strong>Tags:</strong> <span><?= $listing->tags ?></span>
+              </li>
+          <?php endif; ?>
           </ul>
         </div>
       </div>
