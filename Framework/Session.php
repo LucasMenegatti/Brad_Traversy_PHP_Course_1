@@ -33,4 +33,18 @@ class Session {
         session_unset();
         session_destroy();
     }
+
+    // Set a flash message
+    public static function setFlashMessage (string $key,string $message): void
+    {
+        self::set('flash_' . $key, $message);
+    }
+
+    // Get a flash message and unset
+    public static function getFlashMessage (string $key, mixed $default = null): null|string
+    {
+        $message = self::get('flash_' . $key, $default);
+        self::clear('flash_' . $key);
+        return $message;
+    }
 }
